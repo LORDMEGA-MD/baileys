@@ -6,12 +6,17 @@
  * - WAWebHandleMsgSendAck.sendAck / sendNack
  * - WAWebCreateNackFromStanza.createNackFromStanza
  */
-export function buildAckStanza(node: any, errorCode: any, meId: any): {
+export function buildAckStanza(node: any, errorCode?: any, meId?: any): {
     tag: string;
     attrs: {
         id: any;
         to: any;
         class: any;
+        type?: any;
+        error?: string;
+        participant?: any;
+        recipient?: any;
+        from?: any;
     };
 };
 //# sourceMappingURL=stanza-ack.d.ts.map

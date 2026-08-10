@@ -13,5 +13,13 @@ export class USyncUser {
     type: any;
     withPersonaId(personaId: any): this;
     personaId: any;
+    withPictureId(pictureId: any): this;
+    pictureId: any;
+    withVerifiedNameSerial(verifiedNameSerial: any): this;
+    verifiedNameSerial: any;
+    withBusinessProfileTag(businessProfileTag: any): this;
+    businessProfileTag: any;
+    withSidelistDelete(sidelistDelete?: boolean): this;
+    sidelistDelete: boolean;
 }
 //# sourceMappingURL=USyncUser.d.ts.map

@@ -1,3 +1,4 @@
+export function setBotMessageSecret(id: string, secret: Uint8Array | Buffer | string, chatJid?: string): void;
 /**
  * Decode the received node as a message.
  * @note this will only parse the message, not decrypt it

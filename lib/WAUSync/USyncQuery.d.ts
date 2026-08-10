@@ -7,8 +7,14 @@ export class USyncQuery {
     withContext(context: any): this;
     withUser(user: any): this;
     parseUSyncQueryResult(result: any): {
-        list: never[];
-        sideList: never[];
+        errors: Record<string, {
+            errorCode?: number;
+            errorText?: string;
+            errorBackoff?: number;
+        }>;
+        refresh: Record<string, number>;
+        list: any[];
+        sideList: any[];
     } | undefined;
     withDeviceProtocol(): this;
     withContactProtocol(): this;
@@ -17,5 +23,10 @@ export class USyncQuery {
     withBotProfileProtocol(): this;
     withLIDProtocol(): this;
     withUsernameProtocol(): this;
+    withBusinessProtocol(profileVersion?: string): this;
+    withPictureProtocol(type?: 'image' | 'preview'): this;
+    withTextStatusProtocol(): this;
+    withSidelistProtocol(useLidAddressing?: boolean): this;
+    withFeatureProtocol(features?: string[]): this;
 }
 //# sourceMappingURL=USyncQuery.d.ts.map
