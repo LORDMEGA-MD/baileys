@@ -273,6 +273,35 @@ export function makeNewsletterSocket(config: any): {
     sendWAMBuffer: (wamBuffer: any) => Promise<any>;
     executeUSyncQuery: (usyncQuery: any) => Promise<any>;
     onWhatsApp: (...phoneNumber: any[]) => Promise<any>;
+    onWhatsAppUsername: (...queries: (string | {
+        username: string;
+        usernameKey?: string;
+        lid?: string;
+    })[]) => Promise<{
+        username: string;
+        jid: any;
+        exists: boolean;
+    }[]>;
+    fetchUsername: (...jids: any[]) => Promise<{
+        jid: any;
+        username: string | undefined;
+    }[]>;
+    checkUsername: (username: string, includeSuggestions?: boolean, sessionId?: string) => Promise<{
+        available: boolean;
+        username: string;
+        session_id: string;
+        suggestions?: string[];
+        rejectionReasons?: string[];
+        suggestionsEligible?: boolean;
+    }>;
+    setUsername: (username: string, options?: {
+        source?: string;
+        sessionId?: string;
+        pin?: string;
+    }) => Promise<any>;
+    deleteUsername: () => Promise<any>;
+    getMyUsername: () => Promise<any>;
+    setUsernamePin: (pin: string | null) => Promise<any>;
     fetchAccountReachoutTimelock: () => Promise<{
         isActive: boolean;
         timeEnforcementEnds: Date | undefined;
