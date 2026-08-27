@@ -39,9 +39,7 @@
 ### ✨ Highlights
 
 Built for production with an emphasis on readability and reliability:
-
-- 🚫 No obfuscation — clean, auditable code.
-- 🚫 No auto-follow channel (newsletter) behavior.
+.
 - 👁️ Reveal view-once messages via `sock.rvo()`.
 - 📱 Android browser support to receive view-once messages.
 - ✏️ Automatic decryption of E2EE message edits (May 2026+).
